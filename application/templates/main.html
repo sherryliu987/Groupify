@@ -6,5 +6,15 @@
 </head>
 <body>
 
+<form action="{{url_for('groups')}}">
+    <label for="num_groups">Number of groups:</label>
+    <input type="number" id="num_groups" name="people"><br><br>
+
+    <label for="people">Please upload a .csv file of the people being split:</label><br>
+    <input type="file" id="people" name="people"><br><br>
+
+    <input type="submit" value="Groupify!">
+</form>
+
 </body>
 </html>
