@@ -14,21 +14,15 @@ def allowed_file(filename):
 @app.route("/", methods=['GET', 'POST'])
 @app.route("/main",  methods=['GET', 'POST'])
 def home():
-    print("HELLO")
     if request.method == 'POST':
         if 'people' not in request.files:
-            print("MADE IT HERE1")
-            flash('No file part')
             return redirect(request.url)
         file = request.files['people']
         if file.filename == '':
-            flash('No selected file')
-            print("MADE IT HERE2")
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(request.files['people'].filename)
-            print("MADE IT HERE")
             return redirect(url_for('groups', filename=filename))
     return render_template("main.html")
 

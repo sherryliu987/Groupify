@@ -7,12 +7,34 @@
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="../static/main.css">
     <style>
-
+        .letter{
+            font-size: 50px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
     </style>
+
 </head>
 <body>
 <div id="center">
-    <h1>Welcome to Groupify!</h1>
+    <p>
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span style="padding-right: 10px;" class="letter">e  </span>
+        <span class="letter">  t</span>
+        <span style="padding-right: 10px;" class="letter">o  </span>
+        <span class="letter"> G</span>
+        <span class="letter">r</span>
+        <span class="letter">o</span>
+        <span class="letter">u</span>
+        <span class="letter">p</span>
+        <span class="letter">i</span>
+        <span class="letter">f</span>
+        <span class="letter">y</span>
+    </p>
     <p>This is a tool to help you ensure your groups are split with diversity and inclusion in mind.</p>
     <p><b>Step 1: </b>Fill out this spreadsheet with the information of your team.</p>
     <a href="../static/Groupify_Template.xlsx" download>Download Template</a><br><br>
@@ -30,4 +52,19 @@
 <a id="about" href={{url_for('about')}}>About Groupify</a>
 
 </body>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("HELLO")
+        const letters = document.getElementsByClassName("letter");
+
+        console.log(letters)
+        for (let i = 0; i < 17; i++) {
+            const col = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            letters[i].style.color = col;
+        }
+    });
+</script>
+
 </html>
