@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Groupify</title>
+    <link rel="icon" href="../static/favicon.ico"/>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="../static/main.css">
+    <style>
+
+    </style>
 </head>
 <body>
+<div id="center">
+    <h1>Welcome to Groupify!</h1>
+    <p>This is a tool to help you ensure your groups are split with diversity and inclusion in mind.</p>
+    <p><b>Step 1: </b>Fill out this spreadsheet with the information of your team.</p>
+    <a href="../static/Groupify_Template.xlsx" download>Download Template</a><br><br>
+    <form action="{{url_for('home')}}" method="post" enctype=multipart/form-data>
+        <label for="people"><b>Step 2:</b> Upload a completed .csv file of your team's demographics.</label><br><br>
+        <input type="file" id="people" name="people"><br><br>
 
-<form action="{{url_for('groups')}}">
-    <label for="num_groups">Number of groups:</label>
-    <input type="number" id="num_groups" name="people"><br><br>
+        <label for="num_groups"><b>Step 3: </b>Tell us how many groups you would like to create.</label>
+        <input type="number" id="num_groups" name="num_groups"><br><br>
 
-    <label for="people">Please upload a .csv file of the people being split:</label><br>
-    <input type="file" id="people" name="people"><br><br>
+        <span><b>Step 4: </b></span><input type="submit" value="Groupify!">
+    </form>
+</div>
 
-    <input type="submit" value="Groupify!">
-</form>
+<a id="about" href={{url_for('about')}}>About Groupify</a>
 
 </body>
 </html>

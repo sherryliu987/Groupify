@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Groups</title>
+    <link rel="icon" href="../static/favicon.ico"/>
 </head>
 <body>
+
+{% for g in groups%}
+    <p>Team {{g["id"]}}</p>
+    {% for p in g["people"]%}
+        <p>{{p}}</p>
+    {% endfor %}
+{% endfor %}
 
 <a href={{url_for('home')}} class="button">Back to form</a>
 
