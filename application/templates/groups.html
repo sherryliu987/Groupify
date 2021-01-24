@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <title>Groups</title>
     <link rel="icon" href="../static/favicon.ico"/>
+    <link rel="stylesheet" href="../static/groups.css">
+    <style>
+        body{
+            text-align: center;
+        }
+        html {
+            background: url("../static/background-groups.png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-
+<h1>Your groups have been chosen!</h1>
 {% for g in groups%}
-    <p>Team {{g["id"]}}</p>
+    <h3>Team {{g["id"]}}</h3>
     {% for p in g["people"]%}
-        <p>{{p}}</p>
+        <p>{{p}} </p>
     {% endfor %}
 {% endfor %}
 
-<a href={{url_for('home')}} class="button">Back to form</a>
+<a href={{url_for('home')}}><button>Back to form</button></a>
 
 </body>
 
