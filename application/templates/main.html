@@ -5,7 +5,7 @@
     <title>Groupify</title>
     <link rel="icon" href="../static/favicon.ico"/>
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/css/main.css">
     <style>
         .letter{
             font-size: 50px;
@@ -31,7 +31,7 @@
 </head>
 <body>
 <div id="center">
-    <img src="../static/logo.png"><br><br>
+    <img src="../static/images/logo.png"><br><br>
     <p>
         <span class="letter">W</span>
         <span class="letter">e</span>
@@ -58,7 +58,7 @@
         <label for="people"><b>Step 2:</b> Upload a completed .xls file of your team's demographics.</label><br><br>
         <input type="file" id="people" name="people"><br><br>
 
-        <label for="num_groups"><b>Step 3: </b>Tell us how many groups you would like to create (please make sure
+        <label for="num_groups"><b>Step 3: </b>Tell us how many people you would like in each group (please make sure
             your total team size is divisible by this value): </label>
         <input style="width:50px" type="number" id="num_groups" name="num_groups" ><br><br>
 
@@ -74,7 +74,6 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        console.log("HELLO")
         const letters = document.getElementsByClassName("letter");
 
         console.log(letters)

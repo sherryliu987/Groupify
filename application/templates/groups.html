@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Groups</title>
-    <link rel="icon" href="../static/favicon.ico"/>
-    <link rel="stylesheet" href="../static/groups.css">
+<!--    <link rel="icon" href="../static/favicon.ico"/>-->
+    <link rel="stylesheet" href=../static/css/groups.css>
+
     <style>
         body{
             text-align: center;
         }
         html {
-            background: url("../static/background-groups.png") no-repeat center center fixed;
+            background: url("../static/images/background-groups.png") no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -19,6 +20,7 @@
     </style>
 </head>
 <body>
+
 <h1>Your groups have been chosen!</h1>
 {% for g in groups%}
     <h3>Team {{g["id"]}}</h3>
